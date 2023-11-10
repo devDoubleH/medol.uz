@@ -7,12 +7,12 @@ export default function Home() {
       <section className="w-screen h-screen bg-[url('/hero-bg.png')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black opacity-10 z-0" />
         <Header />
-        <div className="px-4 flex flex-col gap-16">
-          <h1 className="text-5xl text-[#0D4C93] mt-20">
+        <div className="px-4 flex flex-col gap-8">
+          <h1 className="text-4xl text-[#0D4C93] mt-12">
             Анализатор
             <br /> ABL800 FLEX
           </h1>
-          <p className="text-2xl">
+          <p className="text-xl">
             Ориентированный на среднюю или высокую производительность тестов,
             анализатор ABL800 FLEX измеряет полный набор параметров, включая pH,
             газы крови, электролиты, метаболиты и показатели оксиметрии
@@ -48,7 +48,7 @@ export default function Home() {
           <button className="button !w-60">Посмотреть все</button>
         </div>
         <div className="flex gap-2 self-center justify-center items-center">
-          <Link href="/" className="text-xl text-[#0D4C93]">
+          <Link href="/" className="text-lg text-[#0D4C93]">
             Перейти в каталог нашей продукции
           </Link>
           <Image src={"/arrow.svg"} width={20} height={20} alt="arrow" />
