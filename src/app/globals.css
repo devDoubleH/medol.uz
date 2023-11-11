@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .button {
   width: 335px;
   height: 60px;
@@ -9,5 +14,16 @@
   background: linear-gradient(90deg, #0d4c93 0%, #00c9c9 100%);
   @apply text-xl self-center;
   border-radius: 35px;
+}
 
+.swiper-pagination-bullet {
+  width: 25px !important;
+  height: 25px !important;
+  border: 2px solid #00c9c9;
+  background-color: white !important;
+  z-index: 10;
+}
+
+.bullet-active {
+  background-color: #00c9c9 !important;
 }

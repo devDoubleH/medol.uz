@@ -11,9 +11,21 @@ const Header = () => {
       <div className="flex justify-center items-center gap-4">
         <Link
           href={"/"}
+          className="w-10 h-10 bg-white hidden justify-center rounded-full md:flex"
+        >
+          <Image src={"/gps.svg"} alt="phone" width={22} height={22} />
+        </Link>
+        <Link
+          href={"/"}
           className="w-10 h-10 bg-white flex justify-center rounded-full"
         >
           <Image src={"/phone-icon.svg"} alt="phone" width={22} height={22} />
+        </Link>
+        <Link
+          href={"/"}
+          className="w-10 h-10 bg-white hidden justify-center rounded-full md:flex"
+        >
+          <Image src={"/search.svg"} alt="phone" width={22} height={22} />
         </Link>
         <select className="w-20 h-10 text-center bg-white rounded-3xl text-3xl outline-none">
           <option>🇷🇺</option>
