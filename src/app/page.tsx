@@ -34,7 +34,6 @@ export default function Home() {
           modules={[Pagination, Autoplay]}
           pagination={{
             el: ".pagination",
-            // bulletClass: "bullet",
             bulletActiveClass: "bullet-active",
           }}
         >
