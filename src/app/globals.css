@@ -12,7 +12,7 @@ body {
   height: 60px;
   color: white;
   background: linear-gradient(90deg, #0d4c93 0%, #00c9c9 100%);
-  @apply text-xl self-center;
+  @apply text-xl;
   border-radius: 35px;
 }
 

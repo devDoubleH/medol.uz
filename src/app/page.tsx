@@ -308,12 +308,7 @@ export default function Home() {
             slidesPerView={1}
             width={window.innerWidth}
             autoplay={{ delay: 2000, disableOnInteraction: false }}
-            modules={[Pagination, Autoplay]}
-            pagination={{
-              el: ".pagination",
-              // bulletClass: "bullet",
-              bulletActiveClass: "bullet-active",
-            }}
+            modules={[Autoplay]}
           >
             {partners.map((item, key) => {
               return (
@@ -337,35 +332,67 @@ export default function Home() {
         <div className="absolute inset-0 bg-black opacity-20 z-0" />
 
         <div className="z-10">
-          <Image src={"/logo.png"} alt="" width={272} height={79} />
+          <Image
+            src={"/logo.png"}
+            alt="logo"
+            className="md:hidden"
+            width={272}
+            height={79}
+          />
 
-          <p className="text-[#595959] text-2xl mt-8">Контакты</p>
-          <div className="flex justify-start items-center gap-4 mt-4">
-            <div className="flex justify-center items-center rounded-full bg-white w-10 h-10">
-              <Image src={"/gps.svg"} alt="svg" width={20} height={20} />
+          <div className="flex flex-col md:flex-row md:gap-16">
+            <p className="text-[#595959] text-2xl mt-8">Контакты</p>
+
+            <div className="flex flex-col justify-start items-start md:flex-row md:flex-wrap md:gap-12">
+              <div className="flex justify-start items-center gap-4 mt-4">
+                <div className="flex justify-center items-center rounded-full bg-white w-10 h-10">
+                  <Image src={"/gps.svg"} alt="svg" width={20} height={20} />
+                </div>
+                <p>
+                  г.Ташкент, Чиланзар <br />
+                  10 квартал, дом 3/1
+                </p>
+              </div>
+              <div className="flex justify-start items-center gap-4 mt-4">
+                <div className="flex justify-center items-center rounded-full bg-white w-10 h-10">
+                  <Image src={"/phone.svg"} alt="svg" width={20} height={20} />
+                </div>
+                <div className="flex flex-col">
+                  <p>+998 71 276-62-53</p>
+                  <p>+998 71 276-62-54</p>
+                </div>
+              </div>
+              <div className="flex justify-start items-center gap-4 mt-4">
+                <div className="flex justify-center items-center rounded-full bg-white w-10 h-10">
+                  <Image src={"/mail.svg"} alt="svg" width={20} height={20} />
+                </div>
+                <p>info@medol.uz</p>
+              </div>
+              <button className="button mt-4">Оставить заявку</button>
             </div>
-            <p>г.Ташкент, Чиланзар 10 квартал, дом 3/1</p>
-          </div>
-          <div className="flex justify-start items-center gap-4 mt-4">
-            <div className="flex justify-center items-center rounded-full bg-white w-10 h-10">
-              <Image src={"/gps.svg"} alt="svg" width={20} height={20} />
-            </div>
-            <p>г.Ташкент, Чиланзар 10 квартал, дом 3/1</p>
-          </div>
-          <div className="flex justify-start items-center gap-4 mt-4">
-            <div className="flex justify-center items-center rounded-full bg-white w-10 h-10">
-              <Image src={"/gps.svg"} alt="svg" width={20} height={20} />
-            </div>
-            <p>г.Ташкент, Чиланзар 10 квартал, дом 3/1</p>
           </div>
 
-          <button className="button mt-4">Оставить заявку</button>
+          <div className="flex w-full justify-center gap-8 my-4 items-center">
+            <div
+              style={{
+                height: 80,
+              }}
+            >
+              <Image
+                src={"/logo.png"}
+                className="hidden md:flex"
+                alt="logo"
+                width={272}
+                height={79}
+              />
+            </div>
 
-          <p className="mt-2 text-sm leading-loose">
-            Наша цель – построить прозрачный, долгосрочный бизнес, приносить
-            огромную пользу населению, путем решения глобальных вопросов.
-            Внедряя инновационные технологии на рынок Узбекистана.
-          </p>
+            <p className="mt-2 text-sm leading-loose md:w-2/4">
+              Наша цель – построить прозрачный, долгосрочный бизнес, приносить
+              огромную пользу населению, путем решения глобальных вопросов.
+              Внедряя инновационные технологии на рынок Узбекистана.
+            </p>
+          </div>
 
           <p className="text-center my-4">
             © 2021 ООО «Medical Online Services»
