@@ -10,6 +10,17 @@ import "swiper/swiper-bundle.css";
 import Header from "../components/header";
 
 export default function Home() {
+  const partners = [
+    "asp.png",
+    "aesculap-b-braun.png",
+    "bd.png",
+    "biosense.png",
+    "cordis.png",
+    "eth.png",
+    "ethicon-endo-surgery.png",
+    "depuy-synthes-spine-jandj.png",
+  ];
+
   return (
     <main className="w-screen h-full min-h-screen flex flex-col">
       <section className="w-screen h-screen bg-[url('/hero-bg.png')] bg-cover bg-center">
@@ -217,26 +228,58 @@ export default function Home() {
           <div className="h-12 w-screen flex justify-center bg-white items-center">
             <p className="text-4xl text-center text-[#0D4C93]">НОВОСТИ</p>
           </div>
+          <div className="flex relative md:gap-8">
+            <div className="w-80 relative h-full flex justify-start flex-col items-center rounded-3xl bg-[#F6F6F6] mt-12 px-8 pb-14">
+              <Image
+                src={"/doctors.png"}
+                alt="doctors"
+                width={274}
+                height={188}
+                className="rounded-[40px] -mt-16"
+              />
+              <p className="text-center mt-26 text-[#0D4C93] mt-4">
+                Mастер-класс в исполнении Галлямова Эдуарда Абдулхаевича
+              </p>
+              <p className="mt-4 text-[#0D4C93]">26.07.2021</p>
 
-          <div className="w-80 relative h-full flex justify-start flex-col items-center rounded-3xl bg-[#F6F6F6] mt-12 px-8 pb-14">
-            <Image
-              src={"/doctors.png"}
-              alt="doctors"
-              width={274}
-              height={188}
-              className="rounded-[40px] -mt-16"
-            />
-            <p className="text-center mt-26 text-[#0D4C93] mt-4">
-              Mастер-класс в исполнении Галлямова Эдуарда Абдулхаевича
-            </p>
-            <p className="mt-4 text-[#0D4C93]">26.07.2021</p>
+              <p className="text-sm text-center">
+                С 19 по 21 апреля в АО «РСНПМЦУ» (Республиканский
+                Специализированный Научно-Практический Медицинский Центр
+                Урологии) при поддержке компаний Ethicon Endo Surgery
+                (Johnson&Johnson) и ИП ООО «Medical Online Services» был
+                проведен
+              </p>
 
-            <p className="text-sm text-center">
-              С 19 по 21 апреля в АО «РСНПМЦУ» (Республиканский
-              Специализированный Научно-Практический Медицинский Центр Урологии)
-              при поддержке компаний Ethicon Endo Surgery (Johnson&Johnson) и ИП
-              ООО «Medical Online Services» был проведен
-            </p>
+              <button className="button !w-64 absolute -bottom-8">
+                Подробнее
+              </button>
+            </div>
+
+            <div className="w-80 relative h-full flex justify-start flex-col items-center rounded-3xl bg-[#F6F6F6] mt-12 px-8 pb-14">
+              <Image
+                src={"/doctors.png"}
+                alt="doctors"
+                width={274}
+                height={188}
+                className="rounded-[40px] -mt-16"
+              />
+              <p className="text-center mt-26 text-[#0D4C93] mt-4">
+                Mастер-класс в исполнении Галлямова Эдуарда Абдулхаевича
+              </p>
+              <p className="mt-4 text-[#0D4C93]">26.07.2021</p>
+
+              <p className="text-sm text-center">
+                С 19 по 21 апреля в АО «РСНПМЦУ» (Республиканский
+                Специализированный Научно-Практический Медицинский Центр
+                Урологии) при поддержке компаний Ethicon Endo Surgery
+                (Johnson&Johnson) и ИП ООО «Medical Online Services» был
+                проведен
+              </p>
+
+              <button className="button !w-64 absolute -bottom-8">
+                Подробнее
+              </button>
+            </div>
 
             <button className="button !w-10 !h-10 absolute -left-4 top-1/2 transform -translate-y-1/2 flex justify-center items-center">
               <Image
@@ -254,35 +297,39 @@ export default function Home() {
                 alt="arrow"
               />
             </button>
-
-            <button className="button !w-64 absolute -bottom-8">
-              Подробнее
-            </button>
           </div>
         </div>
       </section>
 
       <section className="w-screen h-full flex justify-start items-center relative pb-16">
         <div className="z-10 w-screen flex justify-start items-center flex-col gap-8">
-          <div className="h-12 w-screen flex justify-center bg-white items-center">
-            <p className="text-4xl text-center text-[#0D4C93]">ПАРТНЁРЫ</p>
-          </div>
-          <div className="w-11/12 h-60 rounded-3xl border border-[#ECECEC] flex justify-center items-center">
-            <Image
-              src={"/aesculap-b-braun.png"}
-              width={200}
-              height={40}
-              alt="slider"
-              className="self-center"
-            />
-          </div>
-          <Image
-            src={"/slider.svg"}
-            width={100}
-            height={20}
-            alt="slider"
-            className="self-center"
-          />
+          <Swiper
+            spaceBetween={50}
+            slidesPerView={1}
+            width={window.innerWidth}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            modules={[Pagination, Autoplay]}
+            pagination={{
+              el: ".pagination",
+              // bulletClass: "bullet",
+              bulletActiveClass: "bullet-active",
+            }}
+          >
+            {partners.map((item, key) => {
+              return (
+                <SwiperSlide className="w-2/3" key={key}>
+                  <div className="w-full h-full flex justify-center items-center">
+                    <Image
+                      src={`/${item}`}
+                      alt="partner"
+                      width={300}
+                      height={80}
+                    />
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </div>
       </section>
 
