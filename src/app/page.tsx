@@ -30,7 +30,6 @@ export default function Home() {
         <Swiper
           spaceBetween={50}
           slidesPerView={1}
-          width={window.innerWidth}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           modules={[Pagination, Autoplay]}
           pagination={{
