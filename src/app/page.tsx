@@ -106,15 +106,15 @@ export default function Home() {
           </SwiperSlide>
         </Swiper>
 
-        <div className="pagination flex justify-center items-center z-10 mt-10" />
+        <div className="pagination flex justify-center items-center z-10 mt-20" />
       </section>
 
-      <section className="w-screen h-full flex flex-col gap-24 pb-8">
+      <section className="w-screen h-full flex flex-col gap-24 pb-8 justify-center items-center">
         <div className="h-10 w-screen flex justify-center items-center mt-2">
           <p className="text-4xl text-center text-[#0D4C93]">ПРОДУКЦИЯ</p>
         </div>
         {/*  */}
-        <div className="flex justify-center items-center gap-8">
+        <div className="flex justify-center items-center gap-8 lg:flex-wrap lg:w-3/4">
           <div className="rounded-xl flex flex-col items-center justify-around bg-slate-100 shadow-sm self-center w-[335px] h-[439px]">
             <div className="w-55 h-55 self-center">
               <Image
@@ -129,6 +129,7 @@ export default function Home() {
             </p>
             <button className="button !w-60">Посмотреть все</button>
           </div>
+
           <div className="rounded-xl hidden flex-col  items-center justify-around bg-slate-100 shadow-sm self-center w-[335px] h-[439px] md:flex">
             <div className="w-55 h-55 self-center flex justify-center items-center">
               <Image alt="product" src={"/img6.png"} width={220} height={220} />
@@ -137,6 +138,49 @@ export default function Home() {
               Лабораторная
               <br /> диагностика
             </p>
+            <button className="button !w-60">Посмотреть все</button>
+          </div>
+          <div className="rounded-xl hidden flex-col  items-center justify-around bg-slate-100 shadow-sm self-center w-[335px] h-[439px] md:flex">
+            <div className="w-55 h-55 self-center flex justify-center items-center">
+              <Image
+                alt="product"
+                src={"/gallery_cs300_1 1.png"}
+                width={220}
+                height={220}
+              />
+            </div>
+            <p className="text-center text-xl">Кардиохирургия</p>
+            <button className="button !w-60">Посмотреть все</button>
+          </div>
+          <div className="rounded-xl hidden flex-col  items-center justify-around bg-slate-100 shadow-sm self-center w-[335px] h-[439px] md:flex">
+            <div className="w-55 h-55 self-center flex justify-center items-center">
+              <Image
+                alt="product"
+                src={"/754-1 1.png"}
+                width={220}
+                height={220}
+              />
+            </div>
+            <p className="text-center text-xl">ДИАБЕТ</p>
+            <button className="button !w-60">Посмотреть все</button>
+          </div>
+          <div className="rounded-xl hidden flex-col  items-center justify-around bg-slate-100 shadow-sm self-center w-[335px] h-[439px] md:flex">
+            <div className="w-55 h-55 self-center flex justify-center items-center">
+              <Image alt="product" src={"/img5.png"} width={220} height={220} />
+            </div>
+            <p className="text-center text-xl">ЭНДОУРОЛОГИЯ</p>
+            <button className="button !w-60">Посмотреть все</button>
+          </div>
+          <div className="rounded-xl hidden flex-col  items-center justify-around bg-slate-100 shadow-sm self-center w-[335px] h-[439px] md:flex">
+            <div className="w-55 h-55 self-center flex justify-center items-center">
+              <Image
+                alt="product"
+                src={"/pacemaker-advisa-mrishtsh222 1.png"}
+                width={220}
+                height={220}
+              />
+            </div>
+            <p className="text-center text-xl">АРИТМОЛОГИЯ</p>
             <button className="button !w-60">Посмотреть все</button>
           </div>
         </div>
@@ -159,8 +203,8 @@ export default function Home() {
 
           <div className="flex justify-center gap-8">
             <div className="relative">
-              <div className="rounded-3xl self-center h-[500px] mt-4 w-80 bg-white overflow-hidden">
-                <div className="h-60 w-80 relative">
+              <div className="rounded-3xl self-center h-[500px] mt-4 w-96 bg-white overflow-hidden">
+                <div className="h-60 w-96 relative">
                   <Image src={"/service.png"} fill={true} alt="img" />
                 </div>
                 <div className="w-full p-2">
@@ -179,18 +223,38 @@ export default function Home() {
               </div>
             </div>
             <div className="relative hidden md:flex">
-              <div className="rounded-3xl self-center h-[500px] mt-4 w-80 bg-white overflow-hidden">
-                <div className="h-60 w-80 relative">
-                  <Image src={"/service.png"} fill={true} alt="img" />
+              <div className="rounded-3xl self-center h-[500px] mt-4 w-96 bg-white overflow-hidden">
+                <div className="h-60 w-96 relative">
+                  <Image src={"/registration.png"} fill={true} alt="img" />
                 </div>
                 <div className="w-full p-2">
                   <p className="text-xl text-center text-[#0D4C93] mt-8">
-                    СЕРВИС ОБОРУДОВАНИЯ
+                    РЕГИСТРАЦИИ
+                  </p>
+                  <p className="text-sm text-center mt-2">
+                    Обеспечение получения разрешительных документов,
+                    регистрационного удостоверения на изделия медицинского
+                    назначения Подготовка объектов к проведению ....
+                  </p>
+                  <button className="button absolute left-1/2 !w-60 translate-y-14 -translate-x-2/4">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="relative hidden md:flex">
+              <div className="rounded-3xl self-center h-[500px] mt-4 w-96 bg-white overflow-hidden">
+                <div className="h-60 w-96 relative">
+                  <Image src={"/truck.png"} fill={true} alt="img" />
+                </div>
+                <div className="w-full p-2">
+                  <p className="text-xl text-center text-[#0D4C93] mt-8">
+                    УСЛУГИ ЛОГИСТИКИ
                   </p>
                   <p className="text-sm text-center mt-2">
                     Компания предоставляет сервисное обслуживание по всем
                     предоставляемым продуктам. У наших инженеров имеется опыт и
-                    сертификаты фирм производителей......
+                    сертификаты фирм производителей.....
                   </p>
                   <button className="button absolute left-1/2 !w-60 translate-y-14 -translate-x-2/4">
                     Подробнее
@@ -304,7 +368,6 @@ export default function Home() {
           <Swiper
             spaceBetween={50}
             slidesPerView={1}
-            width={window.innerWidth}
             autoplay={{ delay: 2000, disableOnInteraction: false }}
             modules={[Autoplay]}
           >
